@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ button {
+  appearance: none;
+  border: 0;
+}
+button {
+  display: block;
+  width: 280px;
+  height: 50px;
+  cursor: pointer;
+  background: #3eb370;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+}
+ul {
+  padding:0;
+  margin:0;
+  list-style-type: none;
+}
+li,p {
+  margin:0;
+}
+ul > li {
+  width: 280px;
+  border: 0;
+  padding: 0;
+  background-color: #eee;
+  text-align: center;
+  transition: 0.3s;
+}
+ul.open > li {
+  padding: 13px 0;
+  border-top: solid 1px #fff;
+}
+ul > li > p {
+  line-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+ul.open > li > p {
+  line-height: 1.5;
+  opacity: 1;
+  visibility: visible;
+}
+  </style>
+</head>
+<body>
+  <button>クリックで開く</button>
+
+  <ul>
+    <li>
+      <p>アコーディオンを作成します</p>
+    </li>
+    <li>
+      <p>3つの項目に分かれています</p>
+      <p>高さが異なる場合にも対応します</p>
+    </li>
+    <li>
+      <p>最後の項目です</p>
+    </li>
+  </ul>
+<script>
+ document.querySelector('button')
+  .addEventListener('click', () => {
+    document.querySelector('ul').classList.toggle('open');    
+});
+</script>
+</body>
+</html>

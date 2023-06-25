@@ -1,0 +1,623 @@
+/* common */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.currentPage{
+  background: lightgrey;
+  border-radius: 8px;
+}
+
+.container {
+  margin: 0 16px;
+  /* outline: 2px solid red; */
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate.appear {
+  opacity: 1;
+  transform: none;
+}
+
+.voices .comment {
+  background: #eee;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.voices .comment + .comment {
+  margin-top: 16px;
+}
+
+.voices footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/*ユーザーの声*/
+.v_footer {
+  background: #eee;
+}
+
+.v_footer p {
+  color: #000;
+}
+
+/*トップへ戻るボタン*/
+#to_top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  opacity: 0;
+}
+
+#to_top.scrolled {
+  opacity: 1;
+}
+
+#to_top i {
+  font-size: 32px;
+  color: #22577a;
+}
+
+/* header */
+header {
+  /* background: #eee; */
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+header form {
+  display: none;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header li a {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  text-align: center;
+}
+
+header li a i {
+  font-size: 18px;
+}
+
+header li + li {
+  margin-left: 8px;
+}
+
+header input,
+header button {
+  all: unset;
+}
+
+header input {
+  border-bottom: 1px solid #aaa;
+  padding: 4px;
+  width: 300px;
+}
+
+header button {
+  cursor: pointer;
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+/* メニューボタン */
+.pcMenu {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pcMenu ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+}
+.pcMenu li {
+  height: 40px;
+  width: 100%;
+}
+.pcMenu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.pcMenu li a:hover {
+  opacity: 0.5;
+  background-color: #eee;
+}
+
+/* プルダウンメニュー */
+.subMenu ul{
+  margin: 0;
+  background-color: #fff;
+  display: block;
+}
+.subMenu ul li{
+  margin: 0;
+}
+.subMenu .hidden{
+  display: none;
+}
+
+#nav-toggle,
+#global-nav {
+  display: none;
+}
+
+/* hero */
+.hero {
+  height: 400px;
+  padding-top: 112px;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.hero img.current {
+  opacity: 1;
+}
+
+/* 見出し */
+/* 第2階層のheader高さ調整 */
+.secondLay {
+  padding-top: 112px;
+}
+
+p {
+  margin-top: 32px;
+}
+/* products */
+.products {
+  padding: 80px 0;
+  opacity: 0;
+  transform: translateY(20px); /*下から*/
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* 左から
+.products.slide-from-left{
+  transform: translateX(-40px);
+}
+右から
+.products.slide-from-right{
+  transform: translatex(40px);
+} */
+
+.products.appear {
+  opacity: 1;
+  transform: none;
+}
+
+.products ul {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.products .user {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+}
+
+.products li {
+  width: calc((100% - 16px) / 3);
+  /* outline: 2px solid blue; */
+}
+
+.products li img {
+  width: 100%;
+}
+
+.products li h2 {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.products li a {
+  display: block;
+}
+
+.products .more, .products button{
+  background-color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  width: 70%;
+  line-height: 48px;
+  border: 2px solid #333;
+  text-align: center;
+  margin: 32px auto 0;
+}
+
+/* index 新商品*/
+.slide{
+  margin: 20px auto 0 auto;
+  border: 1px solid black;
+  width: 785px;
+}
+.slide img{
+  max-width: 100%;
+}
+.toolbar{
+  overflow: hidden;
+  text-align: center;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 0;
+}
+#prev i{
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+#next i{
+  margin-left: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+#page{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/*online もっとみる*/
+ul.item_hidden > li{
+  display: none;
+}
+ul.item_show > li{
+  display: block;
+  animation: fade-in .6s;
+}
+@keyframes fade-in{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/*footer*/
+footer {
+  padding: 16px 0;
+  color: #4c4948;
+  border-top: 1px solid #4c4948;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+foote small {
+  font-size: 16px;
+}
+
+footer li i {
+  font-size: 24px;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer li + li {
+  margin-left: 8px;
+}
+
+/*small screen*/
+@media (max-width: 599px) {
+  /* スマホドロワーメニューここから */
+  .pcMenu {
+    display: none;
+  }
+
+  #nav-toggle,
+  #global-nav {
+    display: block;
+  }
+
+  #nav-toggle {
+    z-index: 1000;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    height: 25px;
+  }
+
+  #nav-toggle:hover{
+    opacity: .5;
+  }
+
+  #nav-toggle > div {
+    position: relative;
+    width: 30px;
+  }
+
+  #nav-toggle span {
+    width: 100%;
+    height: 3px;
+    left: 0;
+    display: block;
+    background: #333;
+    position: absolute;
+    transition: transform 0.6s ease-in-out, top 0.5s ease;
+  }
+
+  #nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+
+  #nav-toggle span:nth-child(2) {
+    top: 10px;
+  }
+
+  #nav-toggle span:nth-child(3) {
+    top: 20px;
+  }
+
+  .open #nav-toggle span {
+    background: #333;
+  }
+
+  .open #nav-toggle span:nth-child(1) {
+    top: 15px;
+    transform: rotate(45deg);
+  }
+
+  .open #nav-toggle span:nth-child(2) {
+    top: 15px;
+    width: 0;
+    left: 50%;
+  }
+
+  .open #nav-toggle span:nth-child(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+  }
+
+  .open #nav-toggle span {
+    background: #333;
+  }
+
+  .open #nav-toggle span:nth-child(1) {
+    top: 15px;
+    transform: rotate(45deg);
+  }
+
+  .open #nav-toggle span:nth-child(2) {
+    top: 15px;
+    width: 0;
+    left: 50%;
+  }
+
+  .open #nav-toggle span:nth-child(3) {
+    top: 15px;
+    transform: rotate(-45deg);
+  }
+
+  #global-nav {
+    background: #f9f9f9ed;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    font-size: 29px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+  }
+
+  #global-nav a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.6s ease;
+  }
+
+  #global-nav ul {
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: all 0.8s ease;
+  }
+
+  .open #global-nav {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .open #global-nav ul {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .open #global-nav ul li{
+    margin-bottom: 24px;
+  }
+  
+  .open #global-nav ul li:last-child{
+    margin-bottom: 0;
+  }
+
+  .slide{
+    max-width: 100%;
+  }
+  .slide img{
+    max-width: 100%;
+  }
+
+  /* スマホドロワーメニューここまで */
+  .hero {
+    height: 400px;
+    padding-top: 64px;
+  }
+
+  .secondLay {
+    padding-top: 64px;
+  }
+
+  header nav{
+    margin-right: 48px;
+  }
+  .products {
+    padding: 24px 0;
+  }
+
+  .products li {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .voices .comment {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .voices .user {
+    display: block;
+  }
+}
+
+/*mideum screen*/
+@media (min-width: 600px) {
+  /* body{
+    background: pink;
+  } */
+
+  .products {
+    padding: 40px 0;
+  }
+
+  .products li,
+  .products .comment {
+    width: calc((100% - 32px) / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .voices .comment + .comment {
+    margin-top: 0;
+  }
+
+  .slide{
+    max-width: 100%;
+  }
+  .slide img{
+    max-width: 100%;
+  }
+}
+
+/*large screen*/
+@media (min-width: 800px) {
+  /* body{
+    background: skyblue;
+  } */
+
+  header form {
+    display: block;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .animate.delay {
+    transition-delay: 0.3s;
+  }
+
+  .animate.delay-more {
+    transition-delay: 0.6s;
+  }
+}

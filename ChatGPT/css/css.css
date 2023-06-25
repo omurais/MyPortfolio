@@ -1,0 +1,58 @@
+/* スクロール */
+#scroll-wrapper {
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#scroll-wrapper img {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+/* タブメニュー */
+.tabcontent {
+  display: none;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
+.tab {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #ccc;
+}
+
+h3, p{
+  margin: 0;
+  padding: 10px;
+}
+
+#tab1 h3,#tab1 p{
+  background: skyblue;
+}
+
+#tab2 h3,#tab2 p{
+  background: yellow;
+}
+
+#tab3 h3,#tab3 p{
+  background: pink;
+}
+
+#tab4 h3,#tab4 p{
+  background: red;
+}
