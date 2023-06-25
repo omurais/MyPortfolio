@@ -1,0 +1,66 @@
+/*online もっとみる*/
+ul.item_hidden > li{
+  display: none;
+}
+ul.item_show > li{
+  display: block;
+  animation: items-fade-in .6s;
+}
+
+@keyframes items-fade-in{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* ドットインストール FAQのアコーディオン用ここから */
+.faq{
+  margin: 32px 0 0 0;
+}
+.faq__cont{
+  margin-bottom: 8px;
+}
+.faq__cont-q,.faq__cont-a{
+  padding: 8px;
+  width: 100%;
+}
+.faq__cont-q::before{
+  content: 'Q. ';
+}
+.faq__cont-q::after{
+  content: '+ ';
+  position:absolute;
+  top: 8px;
+  right: 16px;
+  transition: transform .3s;
+}
+.faq__cont-a::before{
+  content: 'A. ';
+}
+.faq__cont-q{
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.faq__cont-a{
+  margin: 0;
+  display: none;
+  
+}
+.faq_cont-appear .faq__cont-a{
+  display: block;
+  animation: faq-fade-in .3s;
+}
+.faq_cont-appear .faq__cont-q::after{
+  transform:rotate(45deg);
+}
+@keyframes faq-fade-in{
+  0%{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100%{
+    opacity: 1;
+    transform: none;
+  }
+}
+/* ドットインストール FAQのアコーディオン用ここまで */

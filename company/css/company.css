@@ -1,0 +1,21 @@
+/*company 会社概要*/
+.container .company dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container .company dt {
+  width: calc(100% - 32px);
+  padding: 16px;
+  margin-bottom: 10px;
+  background-color: #F3F3F3;
+}
+
+.container .company dd {
+  width: calc(100% - 32px);
+  padding: 16px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+}

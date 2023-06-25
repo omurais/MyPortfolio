@@ -1,7 +1,11 @@
 /* common */
+html {
+  font-size: 16px;
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
 }
 
 h1,
@@ -11,10 +15,27 @@ h2 {
 
 h1 {
   font-weight: bold;
+  font-size: 1.6em;
+  background: linear-gradient(transparent 60%, #eee 60%);
+  display: inline;
+}
+
+.logo {
+  background: none;
 }
 
 h2 {
   font-weight: normal;
+  font-size: 1.4em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+p,
+li,
+dt,
+dd {
+  font-size: 1rem;
 }
 
 p {
@@ -25,13 +46,13 @@ img {
   vertical-align: bottom;
 }
 
-.currentPage{
+.currentPage {
   background: lightgrey;
   border-radius: 8px;
 }
 
 .container {
-  margin: 0 16px;
+  margin: 0 1em;
   /* outline: 2px solid red; */
 }
 
@@ -49,6 +70,7 @@ a {
 
 a:hover {
   opacity: 0.5;
+  border-radius: 8px;
 }
 
 .animate {
@@ -87,11 +109,43 @@ a:hover {
   color: #000;
 }
 
+/*注意書き*/
+.caution {
+  color: red;
+}
+
+/*各コンテンツ トップ画像*/
+.top_img {
+  text-align: center;
+  position: relative;
+}
+.top_img img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
+
+.top_img p {
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: #aaa 1px 2px 2px;
+  width: 100%;
+}
+
+/* ul.slides li {
+  display: none;
+} */
+
 /*トップへ戻るボタン*/
 #to_top {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 1em;
+  right: 1em;
   opacity: 0;
 }
 
@@ -100,7 +154,7 @@ a:hover {
 }
 
 #to_top i {
-  font-size: 32px;
+  font-size: 48px;
   color: #22577a;
 }
 
@@ -197,15 +251,15 @@ header.scrolled {
 }
 
 /* プルダウンメニュー */
-.subMenu ul{
+.subMenu ul {
   margin: 0;
   background-color: #fff;
   display: block;
 }
-.subMenu ul li{
+.subMenu ul li {
   margin: 0;
 }
-.subMenu .hidden{
+.subMenu .hidden {
   display: none;
 }
 
@@ -296,7 +350,8 @@ p {
   display: block;
 }
 
-.products .more, .products button{
+.products .more,
+.products button {
   background-color: #fff;
   font-size: 1rem;
   cursor: pointer;
@@ -309,55 +364,110 @@ p {
 }
 
 /* index 新商品*/
-.slide{
+.slide {
   margin: 20px auto 0 auto;
-  border: 1px solid black;
   width: 785px;
 }
-.slide img{
+.slide img {
   max-width: 100%;
 }
-.toolbar{
+.toolbar {
   overflow: hidden;
   text-align: center;
 }
-.nav{
+.nav {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px 0;
+  color: #4c4948;
 }
-#prev i{
+#prev i {
   margin-right: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5em;
   cursor: pointer;
 }
-#next i{
+#next i {
   margin-left: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5em;
   cursor: pointer;
 }
-#page{
+#page {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1em;
+}
+
+/*index tab menu*/
+.tab-group {
+  display: flex;
+}
+.tab-group > div {
+  width: 33.33%;
+  text-align: center;
+  margin: 0;
+  padding: 0.5em;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+}
+.tab:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.tabArea-one {
+  display: none;
+}
+.tabArea-two {
+  display: none;
+}
+.tabArea-three {
+  display: none;
+}
+.is-active {
+  background: #eee;
+}
+.is-show {
+  display: block;
+  background: #eee;
+}
+.panel {
+  border-radius: 0 0 8px 8px;
+}
+
+/*index news*/
+.news {
+  display: flex;
+  margin: 0;
+  padding: 1em;
+  flex-wrap: wrap;
+}
+
+.news dd {
+  margin-bottom: 1em;
+}
+.news dd:last-child {
+  margin-bottom: 0;
 }
 
 /*online もっとみる*/
-ul.item_hidden > li{
+ul.item_hidden > li {
   display: none;
 }
-ul.item_show > li{
+ul.item_show > li {
   display: block;
-  animation: fade-in .6s;
+  animation: fade-in 0.6s;
 }
-@keyframes fade-in{
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*footer*/
 footer {
-  padding: 16px 0;
+  padding: 1em 0;
   color: #4c4948;
   border-top: 1px solid #4c4948;
   margin: 0 auto;
@@ -370,12 +480,12 @@ footer .container {
   align-items: center;
 }
 
-foote small {
-  font-size: 16px;
+footer small {
+  font-size: 0.8em;
 }
 
 footer li i {
-  font-size: 24px;
+  font-size: 32px;
 }
 
 footer ul {
@@ -383,7 +493,7 @@ footer ul {
 }
 
 footer li + li {
-  margin-left: 8px;
+  margin-left: 1em;
 }
 
 /*small screen*/
@@ -407,8 +517,8 @@ footer li + li {
     height: 25px;
   }
 
-  #nav-toggle:hover{
-    opacity: .5;
+  #nav-toggle:hover {
+    opacity: 0.5;
   }
 
   #nav-toggle > div {
@@ -521,22 +631,22 @@ footer li + li {
     opacity: 1;
     transform: translateY(0);
   }
-  .open #global-nav ul li{
+  .open #global-nav ul li {
     margin-bottom: 24px;
   }
-  
-  .open #global-nav ul li:last-child{
+
+  .open #global-nav ul li:last-child {
     margin-bottom: 0;
   }
 
-  .slide{
+  .slide {
     max-width: 100%;
   }
-  .slide img{
+  .slide img {
     max-width: 100%;
   }
-
   /* スマホドロワーメニューここまで */
+
   .hero {
     height: 400px;
     padding-top: 64px;
@@ -546,7 +656,7 @@ footer li + li {
     padding-top: 64px;
   }
 
-  header nav{
+  header nav {
     margin-right: 48px;
   }
   .products {
@@ -564,6 +674,49 @@ footer li + li {
 
   .voices .user {
     display: block;
+  }
+
+  .container dt {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .container dd {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  /*index news*/
+  .news {
+    flex: none;
+  }
+  .news dd {
+    padding-bottom: 0.5em;
+    border-bottom: 2px dotted #aaa;
+  }
+  .news dd:last-child {
+    border-bottom: none;
+  }
+
+  /* online */
+  .top_img p {
+    font-size: 1.5em;
+  }
+
+  /* about 画像可変*/
+  .one,
+  .two,
+  .three,
+  .four {
+    width: calc(100% / 2 - 0.4em);
+    margin-bottom: 0.4em;
+  }
+  .one {
+    margin-right: 0.2em;
+  }
+  .three {
+    margin-right: 0.2em;
   }
 }
 
@@ -589,11 +742,32 @@ footer li + li {
     margin-top: 0;
   }
 
-  .slide{
+  .slide {
     max-width: 100%;
   }
-  .slide img{
+  .slide img {
     max-width: 100%;
+  }
+
+  /* .container dt {
+    width: 20%;
+  }
+
+  .container dd {
+    width: 65%;
+  } */
+
+  /* about 画像可変*/
+  .one,
+  .two,
+  .three,
+  .four {
+    width: calc(100% / 4 - 0.5em);
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .four {
+    margin-right: 0;
   }
 }
 
@@ -620,4 +794,167 @@ footer li + li {
   .animate.delay-more {
     transition-delay: 0.6s;
   }
+
+  .container .company {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container .company dt {
+    width: calc(30% - 32px);
+  }
+
+  .container .company dd {
+    width: calc(70% - 32px);
+  }
+}
+
+/* ドットインストールカルーセル */
+.carousel{
+  padding-top: 112px;
+}
+.dtHero {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.dtHero__area {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  transition: transform 1s;
+}
+
+.dtHero__area-img {
+  height: 100%;
+  min-width: 100%;
+}
+
+.dtHero__area-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dtHero__btn-prev,
+.dtHero__btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 40px;
+  padding: 0 8px 4px;
+  cursor: pointer;
+}
+.dtHero__btn-prev:hover,
+.dtHero__btn-next:hover{
+  opacity: 0.8;
+}
+
+.dtHero__btn-prev {
+  left: 0;
+}
+.dtHero__btn-next {
+  right: 0;
+}
+
+/* カルーセルのボタンを隠す */
+.hidden{
+  display: none;
+}
+
+/* モーダルウィンドウ */
+#close{
+  cursor: pointer;
+  width: 200px;
+  border: 1px solid #ccc;
+  background-repeat: 4px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0 auto;
+}
+
+#mask{
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top:0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 998;
+}
+
+#mask.hidden{
+  display: none;
+}
+
+#modal{
+  background: #fff;
+  width: 60%;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 999;
+}
+
+#modal > div > img{
+  width: 90%;
+  margin-top: 24px;
+}
+
+#modal > p {
+  margin: 24px 0;
+}
+
+#modal.modal-hidden{
+  animation: fade-out 1s linear forwards;
+}
+
+.detail{
+  text-decoration: underline;
+}
+
+@keyframes fade-in{
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out{
+  100%{
+    opacity: 0;
+  }
+}
+
+/* カルーセル●ボタン */
+.JScircle{
+text-align: center;
+margin-top: 16px;
+}
+.JScircle button{
+  border: none;
+  width: 16px;
+  height: 16px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.JScircle button + button{
+  margin-left: 8px;
+}
+
+.JScircle .current{
+  background: #999;
 }

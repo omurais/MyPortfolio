@@ -1,9 +1,43 @@
 body{
-  background:#000;
   color: #fff;
   font-family: 'Noto Sans', sans-serif;
 }
-section{
+
+/* タブエリア */
+.tabarea{
+  display: flex;
+}
+.tabarea li{
+  display: flex;
+  height: 2.5rem;
+  width: 25%;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.tabarea li:hover{
+  opacity: 0.7;
+}
+.selected{
+  background: deepskyblue;
+}
+.tabarea__tyo{
+  background: lightgray;
+}
+.tabarea__lax{
+  background: lightgray;
+}
+.tabarea__nyc{
+  background: lightgray;
+}
+.tabarea__lon{
+  background: lightgray;
+}
+
+/* 時計エリア */
+.watch{
   width: 100vw;
   height: 100vh;
   display: flex; /* 要素をflexboxに対応させる */
@@ -24,7 +58,7 @@ section{
   font-size: 0.5em;
 }
 .fi{
-  animation: fadein-keyframes 3s ease 0s 1 forwards;
+  animation: fadein-keyframes 1s ease 0s 1 forwards;
 }
 .cantSee{
   display: none;
@@ -55,6 +89,9 @@ section{
   #day{
     font-size: 2.5em;
   }
+  #city{
+    font-size: 1.5em;
+  }
 }
 
 @media screen and (max-width:520px){
@@ -63,5 +100,8 @@ section{
   }
   #day{
     font-size: 1.5em;
+  }
+  #city{
+    font-size: 1em;
   }
 }

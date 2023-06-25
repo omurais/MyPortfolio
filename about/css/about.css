@@ -1,0 +1,27 @@
+/* about 画像可変*/
+.four-two{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 1.8em;
+}
+
+.one img,.two img,.three img,.four img{
+  width: 100%;
+}
+.one{
+  background:yellow;
+}
+.two{
+  background:skyblue;
+}
+.three{
+  background:chartreuse;
+}
+.four{
+  background:silver;
+}
+.four-two_txt{
+  padding: 0.2em;
+  margin: 0;
+}

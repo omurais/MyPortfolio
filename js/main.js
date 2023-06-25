@@ -80,11 +80,6 @@
 //   // });
 // });
 
-// スマホレイアウトでドロワーメニュー開閉
-$('#nav-toggle').click(function() {
-  $('body').toggleClass('open');
-});
-
 {
   const toggle = document.getElementById('jsToggle');
   const btn = document.getElementById('jsBtn');
@@ -105,3 +100,25 @@ btn.addEventListener('mouseout', ()=> {
   }
 });
 }
+
+  /*トップスライド*/
+  //  let slides = document.getElementsByClassName('slides')[0].getElementsByTagName('li');
+  //  viewSlide(6000);
+
+  // function viewSlide(msec, slide_no = -1) {
+
+  //   if(slides[slide_no]){
+  //     slides[slide_no].style.display = 'none';
+  //   }
+
+  //   slide_no++;
+  //   if(slides[slide_no]){
+  //     slides[slide_no].style.display = 'block';
+  //   } else {
+  //     slides[0].style.display = 'block';
+  //     slide_no = 0;
+  //   }
+  //   setTimeout(function(){
+  //     viewSlide(msec,slide_no);
+  //   }, msec);
+  // }

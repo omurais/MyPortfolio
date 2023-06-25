@@ -27,16 +27,51 @@
 //   console.log('変わった');
 // });
 
-const btn01 = document.querySelector("#moreItem01")
-const btn02 = document.querySelector("#moreItem02")
-const btn03 = document.querySelector("#moreItem03")
+// もっとみるボタン
+{
+  const btn01 = document.querySelector("#moreItem01")
+  const btn02 = document.querySelector("#moreItem02")
+  const btn03 = document.querySelector("#moreItem03")
+  
+  btn01.addEventListener('click', () => {
+    document.querySelector("#jsChair").classList.toggle('item_show');
+    if(btn01.textContent === '▼もっと見る'){
+      btn01.textContent = '▲閉じる';
+    } else {
+      btn01.textContent = '▼もっと見る';
+    }
+  });
+  btn02.addEventListener('click', () => {
+    document.querySelector("#jsLight").classList.toggle('item_show');
+    if(btn02.textContent === '▼もっと見る'){
+      btn02.textContent = '▲閉じる';
+    } else {
+      btn02.textContent = '▼もっと見る';
+    }
+  });
+  btn03.addEventListener('click', () => {
+    document.querySelector("#jsDesk").classList.toggle('item_show');
+    if(btn03.textContent === '▼もっと見る'){
+      btn03.textContent = '▲閉じる';
+    } else {
+      btn03.textContent = '▼もっと見る';
+    }
+  });
+}
 
-btn01.addEventListener('click', () => {
-  document.querySelector("#jsChair").classList.toggle('item_show');
-});
-btn02.addEventListener('click', () => {
-  document.querySelector("#jsLight").classList.toggle('item_show');
-});
-btn03.addEventListener('click', () => {
-  document.querySelector("#jsDesk").classList.toggle('item_show');
-});
+// FAQ開閉
+{
+  const dts = document.querySelectorAll('dt');
+
+  dts.forEach(dt => {
+    dt.addEventListener('click', () => {
+      dt.parentNode.classList.toggle('faq_cont-appear');
+
+      dts.forEach (el => {
+        if (dt !== el){
+          el.parentNode.classList.remove('faq_cont-appear');
+        }
+      })
+    });
+  });
+}

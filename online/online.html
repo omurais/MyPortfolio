@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W4WZ5GX5');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +17,7 @@
   <link rel="icon" href="../img/favicon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="css/online.css">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DRZBEG6T"></script>
@@ -21,10 +29,14 @@
   gtag('config', 'G-Y4DRZBEG6T');
 </script>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4WZ5GX5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="scrolled">
     <div class="container">
       <a href="../index.html">
-        <h1>
+        <h1 class="logo">
           <img 
             src="../img/logo.png" 
             alt="DTFNTR"
@@ -93,13 +105,21 @@
     </nav>
   </div>
   <div id="target"></div>
-
-  <section class="products animate">
-    <div class="container secondLay">
-      <h1>DTFNTR Online Shop</h1>
-      <p>テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。テキスト。</p>
+  <section>
+    <div class="secondLay top_img">
+      <!-- <ul class="slides">
+        <li><img src="img/online-top01.jpg" alt="DTFNTR Online Shop"></li>
+        <li><img src="img/online-top02.jpg" alt="DTFNTR Online Shop"></li>
+      </ul> -->
+      <!-- <p>DTFNTR Online Shop</p> -->
+    </div>
   </section>
-
+  <section class="products animate">
+    <div class="container">
+      <h1>DTFNTR Online Shop</h1>
+      <p>自分の家のどの部屋にも活用できるアイデアや家具、インテリア、小物をDTFNTRで見つけてください。<br>
+        インテリアコーディネートのヒントから、商品の情報まで、あなたの日々の生活をよりよく、またあなたらしく過ごすために。</p>
+  </section>
   <section class="products animate slide-from-left">
     <div class="container">
       <h1>CHAIR</h1>
@@ -151,7 +171,7 @@
           </li>
         </ul>
   
-      <button id="moreItem01" class="more">もっと見る</button>
+      <button id="moreItem01" class="more">▼もっと見る</button>
     </div>
   </section>
 
@@ -176,7 +196,7 @@
             </a>
           </li>
         </ul>
-      <button id="moreItem02" class="more">もっと見る</button>
+      <button id="moreItem02" class="more">▼もっと見る</button>
     </div>
   </section>
 
@@ -201,42 +221,62 @@
             </a>
           </li>
         </ul>
-      <button id="moreItem03" class="more">もっと見る</button>
+      <button id="moreItem03" class="more">▼もっと見る</button>
     </div>
   </section>
 
-  <section class="products animate voices">
+  <section class="products animate">
     <div class="container">
-      <h1>Customer's Voice</h1>
-      <div class="user">
-        <div class="comment">
-        <p>素晴らしいアプリでした。素晴らしいアプリでした。素晴らしいアプリでした。素晴らしいアプリでした。素晴らしいアプリでした。素晴らしいアプリでした。</p>
-        <footer class="v_footer">
-          <img src="../img/user1.png" alt="アイコン" width="40" height="40">
-        <p>会社員（32）</p>
-      </footer>
+      <h1>FAQ - よくあるご質問</h1>
+      <dl class="faq">
+      <div class="faq__cont">
+        <dt class="faq__cont-q">店舗で商品を試すことはできますか？</dt>
+        <dd class="faq__cont-a">可能です。気になる商品がございましたら、店内のスタッフへお声がけください。<br>
+          ※一部お試しできない商品がございます。</dd>
       </div>
-      <div class="animate comment delay">
-        <p>素晴らしいアプリでした。</p>
-        <footer class="v_footer">
-          <img src="../img/user2.png" alt="アイコン" width="40" height="40">
-        <p>学生（21）</p>
-      </footer>
-    </div>
-    <div class="animate comment delay-more">
-        <p>素晴らしいアプリでした。素晴らしいアプリでした。素晴らしいアプリでした。素晴らしいアプリでした。</p>
-        <footer class="v_footer">
-          <img src="../img/user3.png" alt="アイコン" width="40" height="40">
-        <p>犬（4）</p>
-      </footer>
+      <div class="faq__cont">
+        <dt class="faq__cont-q">商品を組み立てるのが難しい場合はどうすればよいですか？</dt>
+        <dd class="faq__cont-a">別途料金が追加となりますが、当社スタッフがお客様のご自宅へ伺い組み立て代行いたします。</dd>
       </div>
+      <div class="faq__cont">
+        <dt class="faq__cont-q">購入した商品の部品が無い、または破損している</dt>
+        <dd class="faq__cont-a">お電話、またはメールにてご連絡ください。早急にご対応いたします。<br>
+        電話 : 03-****-****<br>
+      メール : dtfntr-tokyo@qmail.com</dd>
+      </div>
+      </dl>
     </div>
+</section>
+
+<section class="products animate voices">
+  <div class="container">
+    <h1>Customer's Voice</h1>
+    <div class="user">
+      <div class="comment">
+      <p>家族で使えるダイニングテーブルを探していました。素敵な商品を購入することができました。</p>
+      <footer class="v_footer">
+      <p>会社員（32）</p>
+    </footer>
+    </div>
+    <div class="animate comment delay">
+      <p>大学に合格し一人暮らし用のテーブル兼勉強机を購入しました。便利で使いやすいです。</p>
+      <footer class="v_footer">
+      <p>学生（19）</p>
+    </footer>
+  </div>
+  <div class="animate comment delay-more">
+      <p>わん！（飼い主に自分用の小屋を買ってもらいました）</p>
+      <footer class="v_footer">
+      <p>犬（4）</p>
+    </footer>
+    </div>
+  </div>
 </div>
 </section>
 
   <footer>
     <div class="container">
-      <small>(c) dotinstall.com</small>
+      <small>(c) DTFNTR inc.</small>
       <ul>
         <li><a href="#"><i class="bi bi-twitter"></i></a></li>
         <li><a href="#"><i class="bi bi-instagram"></i></a></li>
