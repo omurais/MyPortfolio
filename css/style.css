@@ -433,21 +433,6 @@ p {
   border-radius: 0 0 8px 8px;
 }
 
-/*index news*/
-.news {
-  display: flex;
-  margin: 0;
-  padding: 1em;
-  flex-wrap: wrap;
-}
-
-.news dd {
-  margin-bottom: 1em;
-}
-.news dd:last-child {
-  margin-bottom: 0;
-}
-
 /*online もっとみる*/
 ul.item_hidden > li {
   display: none;
@@ -497,7 +482,7 @@ footer li + li {
 }
 
 /*small screen*/
-@media (max-width: 599px) {
+@media screen and (max-width: 599px) {
   /* スマホドロワーメニューここから */
   .pcMenu {
     display: none;
@@ -598,6 +583,7 @@ footer li + li {
     bottom: 0;
     z-index: 990;
     font-size: 29px;
+    font-weight: bold;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -614,12 +600,17 @@ footer li + li {
     text-decoration: none;
     padding: 10px;
     transition: color 0.6s ease;
+    cursor: pointer;
   }
 
   #global-nav ul {
     opacity: 0;
     transform: translateY(-200px);
     transition: all 0.8s ease;
+  }
+
+  #global-nav ul li {
+    margin-bottom: 32px;
   }
 
   .open #global-nav {
@@ -630,9 +621,6 @@ footer li + li {
   .open #global-nav ul {
     opacity: 1;
     transform: translateY(0);
-  }
-  .open #global-nav ul li {
-    margin-bottom: 24px;
   }
 
   .open #global-nav ul li:last-child {
@@ -647,14 +635,18 @@ footer li + li {
   }
   /* スマホドロワーメニューここまで */
 
-  .hero {
+  section.carousel{
+    padding-top: 64px;
+  }
+
+  /* .hero {
     height: 400px;
     padding-top: 64px;
   }
 
   .secondLay {
     padding-top: 64px;
-  }
+  } */
 
   header nav {
     margin-right: 48px;
@@ -721,10 +713,38 @@ footer li + li {
 }
 
 /*mideum screen*/
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   /* body{
     background: pink;
   } */
+
+  /*index news*/
+.news{
+  display: flex;
+  margin: 0;
+  padding: 8px;
+  flex-wrap: wrap;
+}
+
+.news dt{
+  width: 20%;
+  margin: 0;
+  padding: 0;
+}
+
+.news dd {
+width: 80%;
+margin: 0;
+padding: 0;
+}
+
+.news dt:not(:first-child){
+  margin-top: 8px;
+}
+
+.news dd:not(:first-child){
+  margin-top: 8px;
+}
 
   .products {
     padding: 40px 0;
@@ -772,7 +792,7 @@ footer li + li {
 }
 
 /*large screen*/
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   /* body{
     background: skyblue;
   } */
@@ -919,6 +939,7 @@ footer li + li {
 
 #modal.modal-hidden{
   animation: fade-out 1s linear forwards;
+  pointer-events: none;
 }
 
 .detail{
